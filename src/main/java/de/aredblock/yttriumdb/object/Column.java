@@ -1,5 +1,6 @@
 package de.aredblock.yttriumdb.object;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -9,7 +10,7 @@ public class Column {
 
     public static Column of(Row... rows) {
         final var instance = new Column();
-        instance.Rows = Arrays.asList(rows);
+        instance.Rows = new ArrayList<>(Arrays.asList(rows));
         return instance;
     }
 
